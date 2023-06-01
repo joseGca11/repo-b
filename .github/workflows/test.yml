@@ -3,7 +3,7 @@ on: push
 
 jobs:
   build-deploy:
-    runs-on: [ self-hosted, org-wide-runner, prod, ubuntu ]
+    runs-on: ubuntu-latest
     name: "teste"
     permissions:
       contents: 'read'
