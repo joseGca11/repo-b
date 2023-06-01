@@ -20,4 +20,13 @@ jobs:
 
       - name: list file
         run: |
+          ls
           ls test
+
+      - name: Adding topology values
+        run: |
+          sed -i "/application:/r test/topology-resources/deployment_values.yaml" topology-resources/teste.yaml
+
+      - name: show Values
+        working-directory: topology-resources/
+        run: cat teste.yaml
