@@ -1,0 +1,23 @@
+name: teste
+on: push
+
+jobs:
+  build-deploy:
+    name: "teste"
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+  steps:
+    - uses: actions/checkout@v3
+    - name: Push generated webpage to another repository
+      uses: nkoppel/push-files-to-another-repository@1.1.0
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source-files: 'topology-resources/'
+        destination-username: 'joseGca11'
+        destination-repository: 'repo-b'
+        destination-directory: 'topology-resources/'
+        commit-email: 'jose.almeida11.git@gmail.com'
+
+
