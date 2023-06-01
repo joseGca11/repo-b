@@ -15,6 +15,7 @@ jobs:
         with:
           repository: joseGca11/inter-repository-workflows
           path: ./test
+          ref: main
 
       - name: list file
         run: |
