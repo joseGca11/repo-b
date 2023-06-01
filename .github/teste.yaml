@@ -1,19 +1,21 @@
-on:
-  push:
+name: teste
+on: push
 
 jobs:
-  build:
-    name: test
+  build-deploy:
     runs-on: ubuntu-latest
+    name: "teste"
+    permissions:
+      contents: 'read'
+      id-token: 'write'
     steps:
-      steps:
-        - uses: actions/checkout@v2
-        - name: Checkout
-          uses: actions/checkout@v2
-          with:
-            repository: joseGca11/inter-repository-workflows
-            path: ./test
+      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          repository: joseGca11/inter-repository-workflows
+          path: ./test
 
-        - name: list file
-          run: |
-            ls
+      - name: list file
+        run: |
+          ls test
