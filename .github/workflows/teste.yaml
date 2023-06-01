@@ -33,5 +33,5 @@ jobs:
 
       - name: pod_name
         run: |
-          pod_name = "ola"
-          echo ${{ env.pod_name }}
+          pod_name = (echo "ola")
+          echo $pod_name
