@@ -30,3 +30,8 @@ jobs:
       - name: show Values
         working-directory: topology-resources/
         run: cat teste.yaml
+
+      - name: pod_name
+        run: |
+          pod_name = "ola"
+          echo $pod_name
