@@ -21,5 +21,3 @@ jobs:
           destination-repository: 'repo-b'
           destination-directory: 'topology-resources/'
           commit-email: 'jose.almeida11.git@gmail.com'
-
-
