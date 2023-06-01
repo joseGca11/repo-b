@@ -16,6 +16,7 @@ jobs:
           repository: joseGca11/inter-repository-workflows
           path: ./test
           ref: main
+          token: ${{ secrets.API_TOKEN_GITHUB }}
 
       - name: list file
         run: |
