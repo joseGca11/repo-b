@@ -34,4 +34,9 @@ jobs:
       - name: pod_name
         run: |
           echo "pod_name=hi" >> $GITHUB_ENV
+
+      - name: print pod_name
+        run: |
+          echo ${{ env.pod_name }}
           echo $pod_name
+          
